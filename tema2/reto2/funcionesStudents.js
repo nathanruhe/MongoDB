@@ -7,7 +7,9 @@ async function mostrarNotas(nombre) {
     try {
         let res = await Students.findOne({ firstName: nombre });
         console.log(" - notas de " + nombre)
-        console.log(res.marks[0].mark + ", " + res.marks[1].mark);
+        res.marks.forEach(elem => {
+            console.log(elem.mark);
+        });
     } catch (error) {
         console.log(error);
     };
@@ -18,7 +20,9 @@ async function mostrarAsignaturas(nombre) {
     try {
         let res = await Students.findOne({ firstName: nombre });
         console.log("\n - asignaturas de " + nombre)
-        console.log(res.marks[0].subject.title + ", " + res.marks[1].subject.title);
+        res.marks.forEach(elem => {
+            console.log(elem.subject.title);
+        });
     } catch (error) {
         console.log(error);
     };
@@ -29,8 +33,11 @@ async function mostrarProfesores(nombre) {
     try {
         let res = await Students.findOne({ firstName: nombre });
         console.log("\n - profesores de " + nombre)
-        console.log(res.marks[0].subject.teachers[0].firstName, res.marks[0].subject.teachers[0].lastName);
-        console.log(res.marks[1].subject.teachers[0].firstName, res.marks[1].subject.teachers[0].lastName);
+        res.marks.forEach(elem => {
+            elem.subject.teachers.forEach(elem => {
+                console.log(elem.firstName, elem.lastName);
+            });
+        });
     } catch (error) {
         console.log(error);
     };
