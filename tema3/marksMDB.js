@@ -12,7 +12,6 @@ const MarksSchema = new mongoose.Schema({
 const TeachersSchema = new mongoose.Schema({
         teacher_first_name: String,
         teacher_last_name: String,
-        marks: [MarksSchema]
 });
 
 MarksSchema.add({teachers: [TeachersSchema]});
