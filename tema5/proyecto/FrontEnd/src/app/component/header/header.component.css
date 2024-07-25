@@ -1,0 +1,23 @@
+header {
+    /* border: 5px solid red; */
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    color: #247600;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 30px;
+}
+
+    header div {
+        display: flex;
+        gap: 80px;
+    }
+
+        header div a {
+            color: white;
+        }

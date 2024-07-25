@@ -1,0 +1,78 @@
+.formulario {
+    background-color: #247600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+    form {
+        border: 5px solid blue;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 20px;
+        box-shadow: 5px 10px 20px rgb(20, 20, 20);
+        border: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        padding: 20px 40px;
+        gap: 20px;
+    }
+
+        h2 {
+            /* border: 5px solid red; */
+            text-align: center;
+        }
+
+        .divInput {
+            /* border: 5px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            input {
+                border-radius: 5px;
+                border: 0;
+                background-color: #23760025;
+                text-align: center;
+            }
+
+                input::placeholder {
+                    text-align: center;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+        .divButton {
+            /* border: 5px solid green; */
+            display: flex;
+            gap: 15px;
+        }
+
+            button {
+                background-color: #247600;
+                padding: 7px 12px;
+                border-radius: 5px;
+                border: 0;
+                box-shadow: 2px 2px 2px rgb(20, 20, 20);
+            }
+
+.datos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;          
+    border: 1px solid #f5c6cb; 
+    border-radius: 4px;   
+    padding: 10px;
+    font-size: 16px;       
+    text-align: center;
+    margin: 10px 30%; 
+}

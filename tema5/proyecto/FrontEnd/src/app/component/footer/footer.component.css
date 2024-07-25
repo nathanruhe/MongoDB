@@ -1,0 +1,9 @@
+footer {
+    /* border: 5px solid red; */
+    background-color: rgb(40, 40, 40);
+    color: #247600;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+}

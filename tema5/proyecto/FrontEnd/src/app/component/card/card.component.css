@@ -1,0 +1,21 @@
+.marcoProf {
+    /* border: 5px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+    div {
+        border-radius: 20px;
+        background-color: #e3f0de;
+        box-shadow: 5px 10px 20px #4b4b4b;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+        gap: 5px;
+    }
+
+    .index {
+        text-align: center;
+    }

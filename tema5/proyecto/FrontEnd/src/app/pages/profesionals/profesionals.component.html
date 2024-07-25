@@ -1,0 +1,36 @@
+<main>
+    <section class="formulario">
+        <form [formGroup]="myForm">
+            <h2>Formulario profesionales</h2>
+            <div class="divInput">
+                <input type="text" placeholder="Nombre" formControlName="nombre">
+                <input type="text" placeholder="Apellido" formControlName="apellido">
+                <input type="number" placeholder="Edad" formControlName="edad">
+                <input type="number" placeholder="Peso" formControlName="peso">
+                <input type="number" placeholder="Altura" formControlName="altura">
+                <input type="text" placeholder="Esta retirado?" formControlName="retirado">
+                <input type="text" placeholder="Nacionalidad" formControlName="nacionalidad">
+                <input type="number" placeholder="Num. de oscars" formControlName="oscars">
+                <input type="text" placeholder="Profesion" formControlName="profesion">
+            </div>
+            <div class="divButton">
+                <button (click)="mostrar()">Mostrar</button>
+                <button (click)="crear()">Crear</button>
+                <button (click)="modificar()">Modificar</button>
+                <button (click)="eliminar()">Eliminar</button>
+            </div>
+        </form>
+    </section>
+
+    <ng-container *ngIf="mensaje">
+        <div class="error">
+            No existe el profesional con los datos introducidos
+        </div>
+    </ng-container>
+
+    <section class="datos">
+        <ng-container *ngFor="let prof of myProf; let i = index">
+            <app-card [profesional]="prof" [index]="i"></app-card>
+        </ng-container>
+    </section>
+</main>
